@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bgColor: #131217;
+    --btnColor: #9bffa5;
+    --btnColor-hover: #bbf8c1;
+    --containerColor: #242329;
+    --textColor: #a8dfbb;
+    --textColor-hover: #95baa3;
+    --itemsColor: #F4D183;
+    --darkItemsColor: #18171F;
+    --grayTextColor: #56555D;
+    --strengthColor: #F7D07A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+}
+
+/* ---------- ESTILOS DEL CONTENEDOR PRINCIPAL ----------- */
+main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/* ---------- ESTILOS DEL CONTENEDOR DEL CONTENIDO ----------- */
+.content-container {
+}
+
+/* ---------- ESTILOS PARA EL TITULO ----------- */
+h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-block-end: 1.7rem;
+    color: var(--grayTextColor);
+}
+
+/* ---------- ESTILOS PARA EL CONTENEDOR DEL PASSWORD Y CONFIGURACIÓN ----------- */
+.password-container, .config-container {
+    padding: 1.4rem;
+    background-color: var(--containerColor);
+}
+
+/* ---------- ESTILOS PARA EL CONTENEDOR DEL PASSWORD ----------- */
+.password-container {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 2rem;
+}
+
+.password-container i {
+    color: var(--textColor);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.password-container i:hover {
+    color: var(--textColor-hover);
+}
+
+/* ---------- ESTILOS PARA EL CONTENEDOR DE LA CONFIGURACIÓN DEL LENGTH ----------- */
+.length-config {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    position: relative;
+    margin-block-end: 2rem;
+}
+
+.length-config label {
+    font-weight: 600;
+}
+
+/* ---------- ESTILOS PARA EL INPUT TYPE RANGE ---------- */
+#password-length {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background-color: var(--bgColor);
+    border-radius: 5px;
+    outline: none;
+}
+
+#password-length::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    aspect-ratio: 1;
+    background-color: #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#password-length::-moz-range-thumb {
+    width: 20px;
+    aspect-ratio: 1;
+    background-color: #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ---------- ESTILOS DEL VALOR DEL INPUT TYPE RANGE ---------- */
+.password-length-value {
+    font-weight: 600;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* ---------- ESTILOS PARA EL CONTENEDOR DE LAS OPCIONES DE CHECKBOX ----------- */
+.checkbox-options {
+    margin-block-end: 1.6rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-block-end: 1rem;
+}
+
+.checkbox-options input {
+    appearance: none; 
+    width: 18px;
+    aspect-ratio: 1;
+    border: 2px solid #FFF;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-options input:hover {
+    border-color: var(--textColor-hover);
+}
+
+.checkbox-options input:checked {
+    background-color: var(--itemsColor);
+    border-color: var(--itemsColor);
+}
+
+.checkbox-options input:checked::after {
+    content: '✔'; 
+    color: var(--bgColor);
+    font-size: 0.8rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ---------- ESTILOS PARA EL CONTENEDOR DEL PASSWORD STRENGTH ----------- */
+.password-strength {
+    padding: 1.4rem;
+    background-color: var(--darkItemsColor);
+    margin-block-end: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.password-strength p{
+    color: var(--grayTextColor);
+    font-weight: 600;
+}
+
+.strength {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.strength p {
+    color: var(--textColor);
+}
+
+/* CONTENEDOR DE LOS BLOQUES PARA MEDIR EL STRENGTH DEL PASSWORD */
+.strength-square-container {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.strength-square {
+    width: 7px;
+    height: 100%;
+    border: 2px solid #FFF;
+}
+
+/* ---------- ESTILOS PARA EL BOTÓN PARA GENERAR LA CONTRASEÑA ----------- */
+#genPasswordBtn {
+    width: 100%;
+    background-color: var(--btnColor);
+    text-align: center;
+    font-weight: 600;
+    padding-block: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+#genPasswordBtn:hover {
+    background-color: var(--btnColor-hover);
+}
+
+#genPasswordBtn i {
+    margin-inline-start: 12px;
+}

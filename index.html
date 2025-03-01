@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="./images/contrasena_icono.png" type="image/png">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Generador De Contraseñas</title>
+</head>
+<body>
+    <main>
+        <div class="content-container">
+            <h1>Password Generator</h1>
+
+            <div class="password-container">
+                <h2 id="password"></h2>
+                <i class="fa-regular fa-copy" id="copyPassword"></i>
+            </div>
+
+            <div class="config-container">
+
+                <div class="length-config">
+                    <label for="password-length">Character Length</label>
+                    <input type="range" id="password-length" name="password-length" min="6" max="14" value="6">
+                    <span class="password-length-value">6</span>
+                </div>
+
+                <div class="checkbox-options">  
+                    <div class="option">
+                        <input type="checkbox" id="uppercase" name="uppercase">
+                        <label for="uppercase">Include Uppercase Letters</label><br/>
+                    </div>
+                    
+                    <div class="option">
+                        <input type="checkbox" id="lowercase" name="lowercase">
+                        <label for="lowercase">Include Lowercase Letters</label><br/>
+                    </div>
+
+                    <div class="option">
+                        <input type="checkbox" id="numbers" name="numbers">
+                        <label for="numbers">Include Numbers</label><br/>
+                    </div>
+
+                    <div class="option">
+                        <input type="checkbox" id="symbols" name="symbols">
+                        <label for="symbols">Include Symbols</label>
+                    </div>
+                </div>
+                
+                <div class="password-strength">
+                    <p>STRENGTH</p>
+
+                    <div class="strength">
+                        <p id="strength-text">MEDIUM</p>
+                        <div class="strength-square-container">
+                            <div class="strength-square"></div>
+                            <div class="strength-square"></div>
+                            <div class="strength-square"></div>
+                            <div class="strength-square"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button id="genPasswordBtn">
+                    GENERATE
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script.js"></script>
+
+</body>
+</html>
